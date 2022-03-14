@@ -24,7 +24,7 @@ def v_a(u_a):
 def psi(u,v):
     return u - y_b
 
-N=10
+N=100
 h = (b-a)/N
 
 
@@ -86,10 +86,10 @@ for i in range(0,step):
     plt.plot(x[i],res[i],alpha=i/step,color='b')
 
 x_ = np.array(x[step-1])
-plt.plot(x_,x_**3+2,'r')
+plt.plot(x_,x_**3+2,color='r')
 
 plt.xlim(left=a,right=b)
-#plt.show()
+plt.show()
 
 occuracy = 0
 for i in range(0,len(x[step-1])):
